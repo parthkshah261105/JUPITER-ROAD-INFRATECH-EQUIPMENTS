@@ -366,21 +366,22 @@ footer span {
 </footer>
 
 <script>
+
 const machines = [
-  ["Machine 01","Mini"],
-  ["Machine 02","Mini"],
-  ["Machine 03","Mini"],
-  ["Machine 04","Mini"],
-  ["Machine 05","Compact"],
-  ["Machine 06","Universal"],
-  ["Machine 07","Universal"],
-  ["Machine 08","Highway"],
-  ["Machine 09","Highway"],
-  ["Machine 10","Highway"],
-  ["Machine 11","Highway"],
-  ["Machine 12","Highway"],
-  ["Machine 13","Highway"],
-  ["Machine 14","Special"]
+  ["MINI 500", "Mini", 1],
+  ["MINI 502", "Mini", 2],
+  ["SUPER 700i", "Mini", 3],
+  ["SUPER 800-5 P", "Mini", 4],
+  ["SUPER 1300-3i", "Compact", 5],
+  ["SUPER 1700-3i", "Universal", 6],
+  ["SUPER 1703-3i", "Universal", 7],
+  ["SUPER 2000-3i", "Highway", 8],
+  ["SUPER 2003-3i", "Highway", 9],
+  ["SUPER 2000-5 X", "Highway", 10],
+  ["SUPER 2003-5 X", "Highway", 11],
+  ["SUPER 2100-5 X", "Highway", 12],
+  ["SUPER 3000-3i", "Highway", 13],
+  ["SUPER 1800-5 X SprayJet", "Special", 14]
 ];
 
 function showMachines(category = "All") {
@@ -390,21 +391,71 @@ function showMachines(category = "All") {
     .filter(machine =>
       category === "All" || machine[1] === category
     )
-    .map((machine, index) => `
-      <div class="product-card">
-        <div class="machine-image">
-          JUPITER MACHINE ${index + 1}
+    .map(machine => {
+      const number = String(machine[2]).padStart(2, "0");
+      const photo = `images/machine-${number}.jpg`;
+
+      return `
+        <div class="product-card">
+
+          <div class="machine-image">
+            <img
+              src="${photo}"
+              alt="${machine[0]}"
+              onerror="this.style.display='none';
+              this.nextElementSibling.style.display='grid'">
+
+            <div class="photo-placeholder">
+              MACHINE PHOTO ${number}
+            </div>
+          </div>
+
+          <h3>${number}. ${machine[0]}</h3>
+
+          <p>Category: ${machine[1]}</p>
+          <p>Nominal Output: Confirm specification</p>
+          <p>Basic Width: Confirm specification</p>
+          <p>Paving Width, Max.: Confirm specification</p>
+          <p>Maximum Laydown Rate: Confirm specification</p>
+          <p><strong>Price: ₹ Price on Request</strong></p>
+
+          <label class="upload-label" for="upload-${number}">
+            + UPLOAD MACHINE PHOTO
+          </label>
+
+          <input
+            class="photo-input"
+            type="file"
+            id="upload-${number}"
+            accept="image/*"
+            onchange="previewPhoto(event, '${number}')">
+
+          <a class="btn" href="#contact">
+            ENQUIRE NOW
+          </a>
+
         </div>
-        <h3>${machine[0]}</h3>
-        <p>Category: ${machine[1]}</p>
-        <p>Specifications: Coming Soon</p>
-        <p>Price: Contact for quotation</p>
-        <a class="btn"
-           href="#contact">
-           ENQUIRE NOW
-        </a>
-      </div>
-    `).join("");
+      `;
+    }).join("");
+}
+
+function previewPhoto(event, number) {
+  const file = event.target.files[0];
+
+  if (!file) return;
+
+  if (!file.type.startsWith("image/")) {
+    alert("Please select an image.");
+    return;
+  }
+
+  const card = event.target.closest(".product-card");
+  const image = card.querySelector(".machine-image img");
+  const placeholder = card.querySelector(".photo-placeholder");
+
+  image.src = URL.createObjectURL(file);
+  image.style.display = "block";
+  placeholder.style.display = "none";
 }
 
 function filterMachines(category, button) {
@@ -416,6 +467,7 @@ function filterMachines(category, button) {
 }
 
 showMachines();
+
 </script>
 
 </body>
