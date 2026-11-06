@@ -1,841 +1,1132 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>JUPITER | Road Infratech Equipments</title>
 
-<meta name="description" content="Jupiter Road Infratech Equipments - Manufacturer and Exporters of Asphalt Mixing Plants and Road Construction Equipments in Ahmedabad, Gujarat, India.">
+<meta name="description"
+content="Jupiter Road Infratech Equipments - Asphalt Mixing Plants and Road Construction Equipment.">
 
 <style>
-:root {
-  --red: #e31b23;
-  --dark: #101010;
-  --dark2: #191919;
-  --white: #ffffff;
-  --grey: #f4f4f4;
-  --text: #333;
-}
+
+/* =========================
+   BASIC RESET
+========================= */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #e31b23;
+    --black: #111111;
+    --white: #ffffff;
+    --grey: #f1f1f1;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
-  background: var(--white);
-  overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--black);
+    background: var(--white);
 }
 
-a {
-  text-decoration: none;
-}
 
-/* TOP BAR */
-
-.topbar {
-  background: #080808;
-  color: #ddd;
-  padding: 9px 6%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-  font-size: 12px;
-}
-
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header {
-  background: var(--dark);
-  color: white;
-  padding: 19px 6%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+    background: var(--black);
+    color: white;
+
+    padding: 18px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+    gap: 20px;
 }
+
+
+/* =========================
+   JUPITER LOGO
+========================= */
 
 .logo {
-  color: white;
-  font-size: 37px;
-  font-weight: 900;
-  letter-spacing: 3px;
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    display: flex;
+    align-items: center;
+
+    line-height: 1;
 }
 
-.logo span {
-  color: var(--red);
+.logo span.jupiter-symbol {
+    display: inline-flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    margin: 0 6px;
+
+    width: 34px;
 }
+
+.logo span.jupiter-symbol i {
+    display: block;
+
+    width: 34px;
+    height: 7px;
+
+    background: var(--red);
+}
+
+
+/* Company name */
 
 .company-name {
-  color: #ccc;
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  margin-top: 3px;
+    color: var(--red);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-top: 6px;
 }
 
-.menu-btn {
-  display: none;
-  background: var(--red);
-  color: white;
-  border: none;
-  padding: 10px 14px;
-  font-size: 20px;
-  cursor: pointer;
-}
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
-  background: #202020;
-  padding: 15px 6%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px 23px;
-  border-top: 1px solid #333;
+    display: flex;
+
+    gap: 22px;
+
+    flex-wrap: wrap;
 }
 
 nav a {
-  color: #eee;
-  font-size: 12px;
-  font-weight: bold;
-  transition: .3s;
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
 }
 
 nav a:hover {
-  color: var(--red);
+    color: var(--red);
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
-  min-height: 540px;
-  padding: 80px 8%;
-  display: flex;
-  align-items: center;
-  color: white;
-  background:
-    linear-gradient(90deg, rgba(0,0,0,.95), rgba(0,0,0,.65)),
-    linear-gradient(135deg, #292929, #555);
-  position: relative;
+    min-height: 430px;
+
+    background:
+        linear-gradient(120deg, #171717, #444444);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 60px 8%;
 }
 
 .hero-content {
-  max-width: 760px;
+    max-width: 650px;
 }
 
-.hero-label {
-  color: #ff5555;
-  font-size: 13px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+.hero-content > p:first-child {
+    color: var(--red);
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
 }
 
 .hero h1 {
-  font-size: clamp(38px, 6vw, 68px);
-  line-height: 1.12;
-  margin: 23px 0;
-  font-weight: 900;
+    font-size: clamp(34px, 5vw, 60px);
+
+    margin: 20px 0;
 }
 
 .hero h1 span {
-  color: var(--red);
+    color: var(--red);
 }
 
 .hero p {
-  max-width: 620px;
-  color: #ddd;
-  font-size: 16px;
-  line-height: 1.9;
+    line-height: 1.8;
+
+    color: #dddddd;
 }
 
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 30px;
-}
+
+/* =========================
+   BUTTON
+========================= */
 
 .btn {
-  display: inline-block;
-  background: var(--red);
-  color: white;
-  padding: 15px 27px;
-  font-size: 13px;
-  font-weight: bold;
-  border: 2px solid var(--red);
-  transition: .3s;
+    display: inline-block;
+
+    background: var(--red);
+
+    color: white;
+
+    padding: 14px 28px;
+
+    margin-top: 25px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
 }
 
 .btn:hover {
-  background: white;
-  color: var(--dark);
-  border-color: white;
+    background: white;
+
+    color: black;
 }
 
-.btn-outline {
-  background: transparent;
-  border-color: white;
-}
 
-.btn-outline:hover {
-  background: white;
-  color: black;
-}
-
-/* INTRO STRIP */
-
-.intro-strip {
-  background: var(--red);
-  color: white;
-  padding: 22px 6%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-  text-align: center;
-}
-
-.intro-strip h3 {
-  font-size: 17px;
-  margin-bottom: 5px;
-}
-
-.intro-strip p {
-  font-size: 12px;
-  color: #ffe6e6;
-}
-
-/* COMMON SECTION */
+/* =========================
+   GENERAL SECTION
+========================= */
 
 .section {
-  padding: 85px 7%;
+    padding: 65px 6%;
 }
 
-.section-heading {
-  text-align: center;
-  margin-bottom: 45px;
+.section-title {
+    text-align: center;
+
+    margin-bottom: 35px;
 }
 
-.section-heading .small-title {
-  color: var(--red);
-  font-weight: bold;
-  font-size: 12px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+.section-title h2 {
+    font-size: 32px;
 }
 
-.section-heading h2 {
-  font-size: clamp(28px, 4vw, 40px);
-  color: var(--dark);
-  margin: 12px 0;
+.section-title span {
+    color: var(--red);
 }
 
-.section-heading h2 span {
-  color: var(--red);
+.section-title p {
+    color: #666666;
+
+    margin-top: 12px;
 }
 
-.section-heading p {
-  color: #777;
-  font-size: 14px;
-  line-height: 1.8;
-}
 
-/* CATEGORY CARDS */
+/* =========================
+   PRODUCT CATEGORIES
+========================= */
 
 .categories {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 20px;
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 18px;
 }
 
 .category {
-  display: block;
-  background: var(--dark);
-  color: white;
-  padding: 30px 20px;
-  min-height: 165px;
-  border-bottom: 5px solid var(--red);
-  transition: .3s;
+    padding: 28px 15px;
+
+    background: var(--black);
+
+    color: white;
+
+    border-bottom: 5px solid var(--red);
+
+    text-align: center;
+
+    font-weight: bold;
+
+    transition: 0.3s;
 }
 
 .category:hover {
-  transform: translateY(-7px);
-  background: #292929;
+    transform: translateY(-5px);
 }
 
-.category .number {
-  color: var(--red);
-  font-size: 13px;
-  font-weight: bold;
+
+/* =========================
+   FILTER BUTTONS
+========================= */
+
+.filter {
+    text-align: center;
+
+    margin-bottom: 30px;
 }
 
-.category h3 {
-  margin: 17px 0 10px;
-  font-size: 19px;
+.filter button {
+    margin: 5px;
+
+    padding: 10px 18px;
+
+    background: white;
+
+    color: black;
+
+    border: 1px solid #cccccc;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
 }
 
-.category p {
-  color: #bbb;
-  font-size: 12px;
+.filter button.active,
+.filter button:hover {
+    background: var(--red);
+
+    color: white;
+
+    border-color: var(--red);
 }
 
-/* PRODUCT FEATURE CARDS */
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 23px;
+/* =========================
+   PRODUCTS GRID
+========================= */
+
+.products {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 25px;
 }
+
+
+/* =========================
+   PRODUCT CARD
+========================= */
 
 .product-card {
-  background: white;
-  border: 1px solid #e6e6e6;
-  transition: .3s;
+    background: #f4f4f4;
+
+    padding: 20px;
+
+    border-bottom: 4px solid var(--red);
+
+    transition: 0.3s;
+
+    border-radius: 2px;
 }
 
 .product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,.1);
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
-.product-image {
-  height: 190px;
-  background: linear-gradient(135deg, #222, #555);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 17px;
-  font-weight: bold;
-  border-bottom: 4px solid var(--red);
+
+/* =========================
+   MACHINE IMAGE
+========================= */
+
+.machine-image {
+    height: 220px;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    overflow: hidden;
+
+    border: 1px solid #dddddd;
 }
 
-.product-info {
-  padding: 23px;
+.machine-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
 }
 
-.product-info h3 {
-  color: var(--dark);
-  margin-bottom: 10px;
+
+/* Agar photo na mile */
+
+.machine-image.no-image {
+    background:
+        linear-gradient(135deg, #dddddd, #aaaaaa);
+
+    color: #444444;
+
+    font-weight: bold;
+
+    font-size: 16px;
 }
 
-.product-info p {
-  color: #777;
-  font-size: 13px;
-  line-height: 1.7;
+
+/* =========================
+   PRODUCT TEXT
+========================= */
+
+.product-card h3 {
+    color: #c81720;
+
+    margin-bottom: 15px;
+
+    font-size: 20px;
 }
 
-.product-info a {
-  display: inline-block;
-  color: var(--red);
-  font-size: 12px;
-  font-weight: bold;
-  margin-top: 15px;
+.product-card p {
+    font-size: 14px;
+
+    margin: 9px 0;
+
+    color: #444444;
 }
 
-/* ABOUT */
+.product-card .btn {
+    width: 100%;
 
-.about-section {
-  background: var(--grey);
+    text-align: center;
+
+    margin-top: 15px;
 }
 
-.about-content {
-  max-width: 950px;
-  margin: auto;
-  text-align: center;
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: var(--grey);
+
+    line-height: 1.8;
 }
 
-.about-content p {
-  font-size: 15px;
-  line-height: 2;
-  color: #555;
-  margin-bottom: 18px;
+.about > p {
+    max-width: 1000px;
+
+    margin: auto;
+
+    text-align: center;
+
+    color: #444444;
 }
 
-/* COMPANY HIGHLIGHT */
 
-.highlight {
-  background: var(--dark);
-  color: white;
-  padding: 65px 7%;
-  text-align: center;
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background: var(--black);
+
+    color: white;
+
+    text-align: center;
 }
 
-.highlight h2 {
-  font-size: clamp(27px, 4vw, 38px);
-  margin-bottom: 15px;
+.contact h2 {
+    font-size: 30px;
 }
 
-.highlight h2 span {
-  color: var(--red);
+.contact p {
+    margin-top: 15px;
+
+    line-height: 1.7;
 }
 
-.highlight p {
-  color: #ccc;
-  line-height: 1.8;
-  max-width: 700px;
-  margin: auto;
+.contact .btn {
+    margin-top: 25px;
 }
 
-/* CONTACT */
 
-.contact-section {
-  background: #f3f3f3;
-}
-
-.contact-box {
-  max-width: 850px;
-  margin: auto;
-  background: white;
-  padding: 35px;
-  border-top: 5px solid var(--red);
-  box-shadow: 0 8px 25px rgba(0,0,0,.07);
-  text-align: center;
-}
-
-.contact-box p {
-  line-height: 1.9;
-  margin-top: 12px;
-  color: #555;
-}
-
-.contact-box h3 {
-  color: var(--red);
-  font-size: 23px;
-}
-
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-  background: #080808;
-  color: white;
-  padding: 50px 7% 20px;
-  text-align: center;
+    background: #222222;
+
+    color: white;
+
+    padding: 35px 6%;
+
+    text-align: center;
+
+    line-height: 2;
 }
 
 footer .logo {
-  font-size: 32px;
+    justify-content: center;
+
+    margin-bottom: 10px;
 }
 
-footer p {
-  color: #aaa;
-  font-size: 13px;
-  line-height: 2;
+footer span {
+    color: var(--red);
 }
 
-.footer-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin: 25px 0;
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 600px) {
+
+    header {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+
+        gap: 14px;
+    }
+
+    .hero {
+        min-height: 350px;
+
+        padding: 45px 6%;
+    }
+
+    .section {
+        padding: 45px 5%;
+    }
+
+    .logo {
+        font-size: 42px;
+    }
+
+    .logo span.jupiter-symbol {
+        width: 36px;
+
+        gap: 5px;
+    }
+
+    .logo span.jupiter-symbol i {
+        width: 36px;
+
+        height: 7px;
+    }
+
+    .machine-image {
+        height: 200px;
+    }
 }
 
-.footer-links a {
-  color: #ddd;
-  font-size: 12px;
-}
-
-.footer-links a:hover {
-  color: var(--red);
-}
-
-.copyright {
-  border-top: 1px solid #333;
-  padding-top: 18px;
-  margin-top: 20px;
-}
-
-/* WHATSAPP FLOATING BUTTON */
-
-.whatsapp {
-  position: fixed;
-  bottom: 22px;
-  right: 22px;
-  background: #168b49;
-  color: white;
-  padding: 14px 19px;
-  border-radius: 40px;
-  font-size: 13px;
-  font-weight: bold;
-  box-shadow: 0 5px 20px rgba(0,0,0,.2);
-  z-index: 100;
-}
-
-/* MOBILE */
-
-@media(max-width: 850px) {
-  header {
-    flex-wrap: wrap;
-  }
-
-  .menu-btn {
-    display: block;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 7%;
-  }
-
-  nav.show {
-    display: flex;
-  }
-
-  nav a {
-    padding: 5px 0;
-  }
-
-  .hero {
-    min-height: 440px;
-    padding: 65px 7%;
-  }
-
-  .section {
-    padding: 60px 6%;
-  }
-}
-
-@media(max-width: 480px) {
-  .logo {
-    font-size: 29px;
-  }
-
-  .company-name {
-    font-size: 9px;
-  }
-
-  .hero h1 {
-    font-size: 39px;
-  }
-
-  .hero p {
-    font-size: 14px;
-  }
-
-  .contact-box {
-    padding: 25px 18px;
-  }
-
-  .whatsapp {
-    right: 12px;
-    bottom: 12px;
-  }
-}
 </style>
 </head>
 
+
 <body>
 
-<!-- TOP BAR -->
 
-<div class="topbar">
-  <span>Ahmedabad, Gujarat, India</span>
-  <span>Call Us: +91 99099 75881</span>
-</div>
-
-<!-- HEADER -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
-  <div>
-    <div class="logo">JUPIT<span>E</span>R</div>
-    <div class="company-name">
-      ROAD INFRATECH EQUIPMENTS
-    </div>
-  </div>
 
-  <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation">
-    ☰
-  </button>
+    <div>
+
+        <!-- JUPITER LOGO -->
+        <div class="logo">
+
+            JUPIT
+
+            <span class="jupiter-symbol">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+
+            R
+
+        </div>
+
+
+        <div class="company-name">
+            JUPITER ROAD INFRATECH EQUIPMENTS
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#about">About</a>
+
+        <a href="#categories">Applications</a>
+
+        <a href="#products">Products</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
 </header>
 
-<!-- NAVIGATION -->
 
-<nav id="mainNav">
-  <a href="index.html">HOME</a>
-  <a href="about.html">ABOUT</a>
-  <a href="products.html">PRODUCTS</a>
-  <a href="road-pavers.html">ROAD PAVERS</a>
-  <a href="mini-class.html">MINI CLASS</a>
-  <a href="compact-class.html">COMPACT CLASS</a>
-  <a href="universal-class.html">UNIVERSAL CLASS</a>
-  <a href="highway-class.html">HIGHWAY CLASS</a>
-  <a href="special-class.html">SPECIAL CLASS</a>
-  <a href="asphalt-mixing-plant.html">ASPHALT PLANT</a>
-  <a href="road-construction-equipment.html">ROAD EQUIPMENT</a>
-  <a href="gallery.html">GALLERY</a>
-  <a href="company-profile.html">COMPANY PROFILE</a>
-  <a href="faq.html">FAQ</a>
-  <a href="contact.html">CONTACT</a>
-</nav>
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-<section class="hero">
-  <div class="hero-content">
+<section class="hero" id="home">
 
-    <div class="hero-label">
-      JUPITER ROAD INFRATECH EQUIPMENTS
+    <div class="hero-content">
+
+        <p>
+            JUPITER ROAD INFRATECH EQUIPMENTS
+        </p>
+
+
+        <h1>
+            Building Better
+            <span>Roads</span>
+            For Tomorrow
+        </h1>
+
+
+        <p>
+            Manufacturer & Exporters of Asphalt Mixing
+            Plants and Road Construction Equipments.
+        </p>
+
+
+        <a href="#products" class="btn">
+            EXPLORE PRODUCTS
+        </a>
+
     </div>
 
-    <h1>
-      Building Better <span>Roads</span> For Tomorrow
-    </h1>
-
-    <p>
-      Manufacturer & Exporters of Asphalt Mixing Plants
-      and Road Construction Equipments. Explore our product
-      range and contact our team for business enquiries.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="products.html" class="btn">EXPLORE PRODUCTS</a>
-      <a href="contact.html" class="btn btn-outline">CONTACT US</a>
-    </div>
-
-  </div>
 </section>
 
-<!-- INTRO STRIP -->
 
-<section class="intro-strip">
-  <div>
-    <h3>Road Pavers</h3>
-    <p>Explore our product range</p>
-  </div>
 
-  <div>
-    <h3>Asphalt Mixing Plants</h3>
-    <p>Enquire about plant solutions</p>
-  </div>
-
-  <div>
-    <h3>Road Equipment</h3>
-    <p>Road construction machinery</p>
-  </div>
-</section>
-
-<!-- CATEGORIES -->
+<!-- =====================================================
+     PRODUCT CATEGORIES
+===================================================== -->
 
 <section class="section" id="categories">
 
-  <div class="section-heading">
-    <div class="small-title">OUR PRODUCT RANGE</div>
-    <h2>Explore Product <span>Classes</span></h2>
-    <p>Discover our road paver categories.</p>
-  </div>
+    <div class="section-title">
 
-  <div class="categories">
+        <h2>
+            Our <span>Product Classes</span>
+        </h2>
 
-    <a href="mini-class.html" class="category">
-      <div class="number">01 / CATEGORY</div>
-      <h3>Mini Class</h3>
-      <p>Explore Mini Class products →</p>
-    </a>
+        <p>
+            Explore our road construction equipment range.
+        </p>
 
-    <a href="compact-class.html" class="category">
-      <div class="number">02 / CATEGORY</div>
-      <h3>Compact Class</h3>
-      <p>Explore Compact Class products →</p>
-    </a>
+    </div>
 
-    <a href="universal-class.html" class="category">
-      <div class="number">03 / CATEGORY</div>
-      <h3>Universal Class</h3>
-      <p>Explore Universal Class products →</p>
-    </a>
 
-    <a href="highway-class.html" class="category">
-      <div class="number">04 / CATEGORY</div>
-      <h3>Highway Class</h3>
-      <p>Explore Highway Class products →</p>
-    </a>
+    <div class="categories">
 
-    <a href="special-class.html" class="category">
-      <div class="number">05 / CATEGORY</div>
-      <h3>Special Class</h3>
-      <p>Explore Special Class products →</p>
-    </a>
+        <div class="category">
+            Mini Class
+        </div>
 
-  </div>
+        <div class="category">
+            Compact Class
+        </div>
+
+        <div class="category">
+            Universal Class
+        </div>
+
+        <div class="category">
+            Highway Class
+        </div>
+
+        <div class="category">
+            Special Class
+        </div>
+
+    </div>
+
 </section>
 
-<!-- PRODUCTS -->
 
-<section class="section" style="background:#f5f5f5;" id="products">
 
-  <div class="section-heading">
-    <div class="small-title">OUR MACHINERY</div>
-    <h2>Our <span>Products</span></h2>
-    <p>Explore our machinery categories and product information.</p>
-  </div>
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
 
-  <div class="product-grid">
+<section class="section" id="products">
 
-    <div class="product-card">
-      <div class="product-image">ROAD PAVERS</div>
-      <div class="product-info">
-        <h3>Road Pavers</h3>
-        <p>Explore our road paver range and enquire about available models.</p>
-        <a href="road-pavers.html">VIEW PRODUCTS →</a>
-      </div>
+    <div class="section-title">
+
+        <h2>
+            Our <span>Machines</span>
+        </h2>
+
+        <p>
+            Explore the Jupiter road construction equipment range.
+        </p>
+
     </div>
 
-    <div class="product-card">
-      <div class="product-image">ASPHALT PLANT</div>
-      <div class="product-info">
-        <h3>Asphalt Mixing Plant</h3>
-        <p>Contact us for information about asphalt mixing plant solutions.</p>
-        <a href="asphalt-mixing-plant.html">VIEW DETAILS →</a>
-      </div>
+
+
+    <!-- FILTER BUTTONS -->
+
+    <div class="filter">
+
+        <button
+            class="active"
+            onclick="filterMachines('All', this)">
+            All
+        </button>
+
+        <button
+            onclick="filterMachines('Mini', this)">
+            Mini
+        </button>
+
+        <button
+            onclick="filterMachines('Compact', this)">
+            Compact
+        </button>
+
+        <button
+            onclick="filterMachines('Universal', this)">
+            Universal
+        </button>
+
+        <button
+            onclick="filterMachines('Highway', this)">
+            Highway
+        </button>
+
+        <button
+            onclick="filterMachines('Special', this)">
+            Special
+        </button>
+
     </div>
 
-    <div class="product-card">
-      <div class="product-image">ROAD EQUIPMENT</div>
-      <div class="product-info">
-        <h3>Road Construction Equipment</h3>
-        <p>Discover our road construction equipment categories.</p>
-        <a href="road-construction-equipment.html">EXPLORE MORE →</a>
-      </div>
+
+
+    <!-- PRODUCT LIST -->
+
+    <div
+        class="products"
+        id="productList">
     </div>
 
-  </div>
 </section>
 
-<!-- ABOUT -->
 
-<section class="section about-section" id="about">
 
-  <div class="about-content">
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
-    <div class="section-heading">
-      <div class="small-title">ABOUT OUR COMPANY</div>
-      <h2>Welcome To <span>Jupiter</span></h2>
+<section
+    class="section about"
+    id="about">
+
+    <div class="section-title">
+
+        <h2>
+            About <span>Jupiter</span>
+        </h2>
+
     </div>
+
 
     <p>
-      Jupiter Road Infratech Equipments is based in Ahmedabad,
-      Gujarat, India. Our company is engaged in manufacturing
-      and exporting asphalt mixing plants and road construction
-      equipment.
+
+        Jupiter Road Infratech Equipments is engaged in
+        asphalt mixing plants and road construction
+        equipment. Contact our team for product details,
+        specifications and business enquiries.
+
     </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section
+    class="section contact"
+    id="contact">
+
+    <h2>
+        Contact Us For Quotes And Prices!
+    </h2>
+
 
     <p>
-      We invite customers and business partners to explore
-      our product categories and contact us for product details,
-      specifications and business enquiries.
+        JUPITER ROAD INFRATECH EQUIPMENTS
     </p>
 
-    <a href="about.html" class="btn">READ MORE ABOUT US</a>
-
-  </div>
-</section>
-
-<!-- HIGHLIGHT -->
-
-<section class="highlight">
-  <h2>Equipment For <span>Road Construction</span></h2>
-  <p>
-    Contact Jupiter Road Infratech Equipments to discuss
-    your machinery requirements and enquire about our
-    available products.
-  </p>
-  <a href="products.html" class="btn">EXPLORE OUR RANGE</a>
-</section>
-
-<!-- CONTACT -->
-
-<section class="section contact-section" id="contact">
-
-  <div class="section-heading">
-    <div class="small-title">GET IN TOUCH</div>
-    <h2>Contact <span>Jupiter</span></h2>
-    <p>For product details, quotations and business enquiries.</p>
-  </div>
-
-  <div class="contact-box">
-
-    <h3>JUPITER ROAD INFRATECH EQUIPMENTS</h3>
-
-    <p><strong>Mobile:</strong> +91 99099 75881</p>
 
     <p>
-      <strong>Address:</strong><br>
-      No. 215, 2nd Floor, Mahadev Complex,<br>
-      Near Ramol Police Station, C.T.M.-Ramol Road,<br>
-      Ramol, Ahmedabad - 382449,<br>
-      Gujarat, India.
+        Mobile: +91 99099 75881
     </p>
 
-    <p><strong>GSTIN:</strong> 24BASPS3109M1Z7</p>
 
-    <a class="btn" href="contact.html">CONTACT PAGE</a>
+    <p>
+        No. 215, 2nd Floor, Mahadev Complex,
+        Near Ramol Police Station, C.T.M.-Ramol Road,
+        Ramol, Ahmedabad - 382449, Gujarat, India.
+    </p>
 
-  </div>
+
+    <p>
+        All prices and quotations in Indian Rupees (₹ INR).
+    </p>
+
+
+    <a
+        class="btn"
+        href="https://wa.me/919909975881"
+        target="_blank">
+
+        SEND ENQUIRY
+
+    </a>
+
 </section>
 
-<!-- FOOTER -->
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
-  <div class="logo">JUPIT<span>E</span>R</div>
+    <div class="logo">
 
-  <p>JUPITER ROAD INFRATECH EQUIPMENTS</p>
+        JUPIT
 
-  <p>
-    Manufacturer & Exporters of Asphalt Mixing Plant
-    & Road Construction Equipments
-  </p>
+        <span class="jupiter-symbol">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
 
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="company-profile.html">Company Profile</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-  </div>
+        R
 
-  <p>Ahmedabad, Gujarat, India</p>
-  <p>Mobile: +91 99099 75881</p>
-  <p>GSTIN: 24BASPS3109M1Z7</p>
+    </div>
 
-  <div class="copyright">
-    <p>© 2026 Jupiter Road Infratech Equipments. All Rights Reserved.</p>
-  </div>
+
+    <p>
+        JUPITER ROAD INFRATECH EQUIPMENTS
+    </p>
+
+
+    <p>
+        © 2026 Jupiter. All Rights Reserved.
+    </p>
+
+
+    <p>
+        Ahmedabad, Gujarat, India
+    </p>
 
 </footer>
 
-<!-- WHATSAPP BUTTON -->
 
-<a class="whatsapp"
-   href="https://wa.me/919909975881"
-   target="_blank"
-   rel="noopener">
-   WHATSAPP ENQUIRY
-</a>
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
 <script>
-function toggleMenu() {
-  document.getElementById("mainNav").classList.toggle("show");
+
+
+/*
+=========================================================
+14 MACHINE DATA
+
+IMPORTANT:
+
+Apni photos "images" folder ke andar rakho.
+
+Example:
+
+images/
+machine01.jpg
+machine02.jpg
+machine03.jpg
+...
+machine14.jpg
+=========================================================
+*/
+
+
+const machines = [
+
+    {
+        name: "Machine 01",
+        category: "Mini",
+        image: "images/machine01.jpg"
+    },
+
+    {
+        name: "Machine 02",
+        category: "Mini",
+        image: "images/machine02.jpg"
+    },
+
+    {
+        name: "Machine 03",
+        category: "Mini",
+        image: "images/machine03.jpg"
+    },
+
+    {
+        name: "Machine 04",
+        category: "Mini",
+        image: "images/machine04.jpg"
+    },
+
+    {
+        name: "Machine 05",
+        category: "Compact",
+        image: "images/machine05.jpg"
+    },
+
+    {
+        name: "Machine 06",
+        category: "Universal",
+        image: "images/machine06.jpg"
+    },
+
+    {
+        name: "Machine 07",
+        category: "Universal",
+        image: "images/machine07.jpg"
+    },
+
+    {
+        name: "Machine 08",
+        category: "Highway",
+        image: "images/machine08.jpg"
+    },
+
+    {
+        name: "Machine 09",
+        category: "Highway",
+        image: "images/machine09.jpg"
+    },
+
+    {
+        name: "Machine 10",
+        category: "Highway",
+        image: "images/machine10.jpg"
+    },
+
+    {
+        name: "Machine 11",
+        category: "Highway",
+        image: "images/machine11.jpg"
+    },
+
+    {
+        name: "Machine 12",
+        category: "Highway",
+        image: "images/machine12.jpg"
+    },
+
+    {
+        name: "Machine 13",
+        category: "Highway",
+        image: "images/machine13.jpg"
+    },
+
+    {
+        name: "Machine 14",
+        category: "Special",
+        image: "images/machine14.jpg"
+    }
+
+];
+
+
+
+/*
+=========================================================
+SHOW MACHINES
+=========================================================
+*/
+
+function showMachines(category = "All") {
+
+    const list =
+        document.getElementById("productList");
+
+
+    const filteredMachines =
+        machines.filter(machine => {
+
+            return category === "All"
+                || machine.category === category;
+
+        });
+
+
+
+    list.innerHTML =
+        filteredMachines.map((machine, index) => {
+
+            return `
+
+                <div class="product-card">
+
+                    <div class="machine-image">
+
+                        <img
+                            src="${machine.image}"
+                            alt="${machine.name}"
+                            onerror="this.style.display='none'; this.parentElement.classList.add('no-image'); this.parentElement.innerHTML='<span>${machine.name}<br>Photo Coming Soon</span>';"
+                        >
+
+                    </div>
+
+
+                    <h3>
+                        ${machine.name}
+                    </h3>
+
+
+                    <p>
+                        <strong>Category:</strong>
+                        ${machine.category}
+                    </p>
+
+
+                    <p>
+                        <strong>Specifications:</strong>
+                        Coming Soon
+                    </p>
+
+
+                    <p>
+                        <strong>Price:</strong>
+                        Contact for quotation
+                    </p>
+
+
+                    <a
+                        class="btn"
+                        href="#contact">
+
+                        ENQUIRE NOW
+
+                    </a>
+
+                </div>
+
+            `;
+
+        }).join("");
+
 }
+
+
+
+/*
+=========================================================
+FILTER MACHINES
+=========================================================
+*/
+
+function filterMachines(category, button) {
+
+    document
+        .querySelectorAll(".filter button")
+        .forEach(btn => {
+
+            btn.classList.remove("active");
+
+        });
+
+
+    button.classList.add("active");
+
+
+    showMachines(category);
+
+}
+
+
+
+/*
+=========================================================
+LOAD ALL MACHINES WHEN PAGE OPENS
+=========================================================
+*/
+
+showMachines();
+
 </script>
 
+
 </body>
+
 </html>
